@@ -4,7 +4,15 @@
 
 ## To-do list
 
-* 
+* Outline database tables and their respective keys
+* Figure out the models for Users, Blogposts and Comments
+* Write a bit of seed data
+* Set up the front end login page
+* Set up the front end blogpost
+* Set up the front end comments
+* Set up the routes for loggin
+* Set up the routes for posting/commenting
+
 
 ## Getting Started
 
