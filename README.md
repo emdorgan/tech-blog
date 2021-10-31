@@ -30,6 +30,7 @@
     * `username`
         * String
         * Not NULL
+        * Must be unique
 
     * `password`
         * String
@@ -81,9 +82,6 @@
     * `post_id`
         * Integer
         * References the `Post` model's `id`
-    
-
-
 
 ## Deployed Link
 
