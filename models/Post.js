@@ -3,6 +3,8 @@ const sequelize = require('../config/connection');
 
 class Post extends Model {}
 
+// Sets up model for Post (blogpost) table, has an id, title, text and an associated user id. It also gets timestamped
+
 Post.init(
     {
         id: {

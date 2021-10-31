@@ -8,6 +8,8 @@ class User extends Model {
     }
 }
 
+// Sets up the model for user, has an ID, username and password (which gets hashed via bcrypt)
+
 User.init(
     {
         id: {
