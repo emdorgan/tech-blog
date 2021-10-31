@@ -52,7 +52,7 @@
         * text
         * Not NULL
     
-    * `post_date`
+    * `post_date` (sequelize makes this automatically?)
         * Date
         * Not NULL
     
@@ -71,7 +71,7 @@
         * text
         * Not NULL
     
-    * `comment_date`
+    * `comment_date` (sequelize makes this automatically?)
         * Date
         * Not NULL
     
