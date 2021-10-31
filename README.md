@@ -16,6 +16,73 @@
 
 ## Getting Started
 
+## Database Model
+
+* `User`
+
+    * `id`
+
+        * Integer
+        * NOT NULL
+        * Primary Key
+        * Auto-increment
+    
+    * `username`
+        * String
+        * Not NULL
+
+    * `password`
+        * String
+        * Not NULL
+        * Validation: len[8] (can't be less than 8 characters)
+
+* `Post`
+    * `id`
+        * Integer
+        * Not Null
+        * Primary Key
+        * Auto-increment
+    
+    * `title`
+        * String
+        * Not NULL
+    
+    * `post_text`
+        * text
+        * Not NULL
+    
+    * `post_date`
+        * Date
+        * Not NULL
+    
+    * `user_id`
+        * Integer
+        * References the `User` model's `id`
+
+* `Comment`
+    * `id`
+        * Integer
+        * Not NULL
+        * Primary Key
+        * Auto-increment
+    
+    * `comment_text`
+        * text
+        * Not NULL
+    
+    * `comment_date`
+        * Date
+        * Not NULL
+    
+    * `user_id`
+        * Integer
+        * References the `User` model's `id`
+
+    * `post_id`
+        * Integer
+        * References the `Post` model's `id`
+    
+
 
 
 ## Deployed Link
