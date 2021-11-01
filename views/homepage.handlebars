@@ -1,1 +1,14 @@
 {{!-- landing page, shows all blogposts --}}
+
+{{#each post as |blogpost|}}
+<div class ="row mb-4">
+    <div class = "col md-5">
+        <h2>
+            {{!-- make into a link to the individual blogpost after testing --}}
+            {{blogpost.title}}
+        </h2>
+        <p>
+            {{blogpost.post_text}}
+        </p>
+    </div>
+</div>
