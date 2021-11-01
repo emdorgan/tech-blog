@@ -2,10 +2,12 @@ const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+// POST route for when the user creats an account
 router.post('/', async (req, res) => {
     try {
       const userData = await User.create(req.body);
-  
+
+      // sets up the express session so the user is in the logged in state
       req.session.save(() => {
         req.session.user_id = userData.id;
         req.session.username = userData.username;
@@ -18,6 +20,7 @@ router.post('/', async (req, res) => {
     }
   });
 
+  // POST route for when the user signs in
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({where: {username: req.body.username} });
@@ -32,7 +35,7 @@ router.post('/login', async (req, res) => {
     if(!validatePassword){
       res.status(400).json( {message: 'Invalid password'} )
     }
-
+    // sets up the express session so the user is in the logged in state
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.username = userData.username;

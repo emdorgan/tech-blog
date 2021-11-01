@@ -4,7 +4,7 @@
   </div>
 </div>
 {{#each posts as |my_post|}}
-<div class="row">
+<div class="row" id="current-post">
   <div class ="row mb-4">
     <div class = "col md-5">
         <h2>
@@ -22,4 +22,6 @@
 </div>
 {{/each}}
 
-<a href="#"><button type="button" class="btn btn-secondary">+ New Post</button></a>
+<a href="/dashboard/new"><button type="button" class="btn btn-secondary">+ New Post</button></a>
+
+<script src="./js/dashboard.js"></script>

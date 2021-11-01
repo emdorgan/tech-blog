@@ -24,6 +24,7 @@ router.get('/', async (req, res) =>{
     
 });
 
+// GET route for the user's dashboard. Only happens with authorization, fetches the matching user's blogposts
 router.get('/dashboard', withAuth, async (req, res) => {
     try {
         const userData = await User.findByPk(req.session.user_id, {
@@ -42,6 +43,25 @@ router.get('/dashboard', withAuth, async (req, res) => {
     }
 })
 
+// GET route for the new blogpost route
+
+router.get('/dashboard/new', withAuth, async (req, res) => {
+    try {
+        const userData = await User.findByPk(req.session.user_id, {
+            attributes: {exclude: ['password'] },
+        });
+
+        const user = userData.get({ plain: true });
+        res.render('newpost', {
+            ...user,
+            logged_in: true
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+// GET route that just checks if the user is logged in
 router.get('/login', (req, res) => {
     // If the user is already logged in, redirect the request to another route
     if (req.session.logged_in) {
