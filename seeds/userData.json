@@ -1,18 +1,22 @@
 [
     {
         "username": "Y'shtola",
-        "password": "overtheknee"
+        "password": "overtheknee",
+        "id": 1
     },
     {
         "username": "Urianger",
-        "password": "thouartbrave"
+        "password": "thouartbrave",
+        "id": 2
     },
     {
         "username": "Alisae",
-        "password": "thebettertwin"
+        "password": "thebettertwin",
+        "id": 3
     },
     {
         "username": "Alphinaud",
-        "password": "thebettertwin"
+        "password": "thebettertwin",
+        "id": 4
     }
 ]

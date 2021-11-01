@@ -7,12 +7,13 @@
   <title>Tech Blog</title>
     <link rel="stylesheet" href="/css/jass.css">
     <link rel="stylesheet" href="/css/style.css">
-{{!-- add bootstrap --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 </head>
 
 <body>
   {{!-- make a nav bar that remains the same --}}
-  <header class="display-flex justify-space-between align-center p-2">
+  <header class="">
     <h1>
       Tech Blog
     </h1>
@@ -22,8 +23,13 @@
       <button class="btn" id="logout">logout</button>
     </nav>
     {{/if}}
+    {{#unless logged_in}}
+    <nav>
+      <button class="btn" id="login">login</button>
+    </nav>
+    {{/unless}}
   </header>
-  <main class="container container-fluid mt-5">
+  <main class="">
     {{{ body }}}
   </main>
   <footer>
@@ -31,7 +37,10 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
-  {{!-- add bootstrap script --}}
+  {{#unless logged_in}}
+  <script src="/js/login.js"></script>
+  {{/unless}}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 
 </html>
