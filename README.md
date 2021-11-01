@@ -4,9 +4,6 @@
 
 ## To-do list
 
-* Outline database tables and their respective keys
-* Figure out the models for Users, Blogposts and Comments
-* Write a bit of seed data
 * Set up the front end login page
 * Set up the front end blogpost
 * Set up the front end comments
@@ -15,6 +12,8 @@
 
 
 ## Getting Started
+
+## Deployed Link
 
 ## Database Model
 
@@ -52,7 +51,7 @@
         * text
         * Not NULL
     
-    * `post_date` (sequelize makes this automatically?)
+    * `post_date`
         * Date
         * Not NULL
     
@@ -71,7 +70,7 @@
         * text
         * Not NULL
     
-    * `comment_date` (sequelize makes this automatically?)
+    * `comment_date`
         * Date
         * Not NULL
     
@@ -82,10 +81,6 @@
     * `post_id`
         * Integer
         * References the `Post` model's `id`
-
-## Deployed Link
-
-
 
 ## Screenshots
 
