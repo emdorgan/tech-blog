@@ -1,18 +1,18 @@
 [
     {
-        "name": "Y'shtola",
+        "username": "Y'shtola",
         "password": "overtheknee"
     },
     {
-        "name": "Urianger",
+        "username": "Urianger",
         "password": "thouartbrave"
     },
     {
-        "name": "Alisae",
+        "username": "Alisae",
         "password": "thebettertwin"
     },
     {
-        "name": "Alphinaud",
+        "username": "Alphinaud",
         "password": "thebettertwin"
     }
 ]
