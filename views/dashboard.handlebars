@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{username}}!</h2>
+  </div>
+</div>
+{{#each posts as |my_post|}}
+<div class="row">
+  <div class ="row mb-4">
+    <div class = "col md-5">
+        <h2>
+            {{!-- make into a link to the individual blogpost after testing --}}
+            {{my_post.title}}
+        </h2>
+        <p>
+            {{my_post.post_text}}
+        </p>
+        <p>
+            {{format_date my_post.date_created}}
+        </p>
+    </div>
+  </div>
+</div>
+{{/each}}
+
+<a href="#"><button type="button" class="btn btn-secondary">+ New Post</button></a>
