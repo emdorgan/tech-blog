@@ -4,11 +4,10 @@
 
 ## To-do list
 
-* Set up the front end login page
-* Set up the front end blogpost
-* Set up the front end comments
-* Set up the routes for loggin
-* Set up the routes for posting/commenting
+* When user clicks on a post they should see title, etc.. and have option to leave a comment
+* When user clicks on dashboard's new post button they can add a new post
+* When a user clicks on one of THEIR posts, they have the option to update
+* When a user clicks on THEIR posts, they have the option to delete
 
 
 ## Getting Started
