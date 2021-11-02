@@ -4,8 +4,7 @@
 
 ## To-do list
 
-* When user clicks on a post they should see title, etc.. and have option to leave a comment
-* When user clicks on dashboard's new post button they can add a new post
+* When user clicks on a post they should see title, COMMENTS etc.. and have option to leave a comment
 * When a user clicks on one of THEIR posts, they have the option to update
 * When a user clicks on THEIR posts, they have the option to delete
 

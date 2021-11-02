@@ -24,6 +24,36 @@ router.get('/', async (req, res) =>{
     
 });
 
+// GET route for when a user clicks on a blogpost
+router.get('/blogpost/:id', async (req, res) => {
+    try {
+        const blogPostData = await Post.findByPk(req.params.id, {
+            include: [
+                {
+                    model: User,
+                    attributes: ['username'],
+                },
+                {
+                    model: Comment,
+                    attributes: ['comment_text', 'date_created'],
+                    include: [{
+                        model: User
+                    }]
+                },
+            ],
+        });
+        const blogPost = blogPostData.get({ plain: true });
+        console.log(blogPost);
+        res.render('blogpost', {
+            blogPost,
+            logged_in: req.session.logged_in
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
+
 // GET route for the user's dashboard. Only happens with authorization, fetches the matching user's blogposts
 router.get('/dashboard', withAuth, async (req, res) => {
     try {

@@ -34,6 +34,10 @@ Comment.belongsTo(Post, {
     foreignKey: 'post_id',
 });
 
+// Comment.hasOne(User, {
+//     foreignKey: 'user_id'
+// })
+
 // posts can have many comments
 
 Post.hasMany(Comment, {
