@@ -3,8 +3,8 @@
     <h2>Welcome, {{username}}!</h2>
   </div>
 </div>
+<div class="row my-posts" id="current-post">
 {{#each posts as |my_post|}}
-<div class="row" id="current-post">
   <div class ="row mb-4">
     <div class = "col md-5">
         <h2>
@@ -15,11 +15,16 @@
             {{my_post.post_text}}
         </p>
         <p>
-            {{format_date my_post.date_created}}
+            Written by me on {{format_date my_post.date_created}}
         </p>
+        <button class="btn btn-sm btn-warning" data-id="{{my_post.id}}" id="update">UPDATE</button>
+        <button class="btn btn-sm btn-danger" data-id="{{my_post.id}}" id="delete">DELETE</button>
+
+
     </div>
   </div>
-</div>
 {{/each}}
+</div>
 
 <a href="/dashboard/new"><button type="button" class="btn btn-secondary">+ New Post</button></a>
+<script src="/js/dashboard.js"></script>
