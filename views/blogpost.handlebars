@@ -22,8 +22,8 @@
 {{/each}}
 
 {{#if logged_in}}
-<button type="button" class="btn btn-secondary">+ New Comment</button>
-<form class="comment-form">
+<button type="button" class="btn btn-secondary" id="new-comment-btn">+ New Comment</button>
+<form class="comment-form hidden">
   <div class="form-group">
     <label for="blog-content">New Comment</label>
     <input type="text" class="form-control" id="new-comment" placeholder="Enter Comment">
