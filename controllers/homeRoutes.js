@@ -50,6 +50,9 @@ router.get('/post/:id', async (req, res) => {
     }
 })
 
+// POST route for new comment
+
+
 
 // GET route for the user's dashboard. Only happens with authorization, fetches the matching user's blogposts
 router.get('/dashboard', withAuth, async (req, res) => {

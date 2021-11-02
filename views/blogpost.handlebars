@@ -20,3 +20,15 @@
     <p>{{comment.commenter}} on {{format_date comment.date_created}}</p>
 </div>
 {{/each}}
+
+{{#if logged_in}}
+<button type="button" class="btn btn-secondary">+ New Comment</button>
+<form class="comment-form">
+  <div class="form-group">
+    <label for="blog-content">New Comment</label>
+    <input type="text" class="form-control" id="new-comment" placeholder="Enter Comment">
+  </div>
+  <button type="submit" class="btn btn-primary" id="submit-comment" data-id="{{blogPost.id}}">Submit</button>
+</form>
+<script src="/js/blogpost.js"></script>
+{{/if}}

@@ -1,6 +1,7 @@
 const newPostHandler = async (event) => {
     event.preventDefault();
 
+    // client side javascript that takes the user entered data and makes a POST request to the database
     const title = document.querySelector('#blog-title').value.trim();
     const post_text = document.querySelector('#blog-content').value.trim();
     if(title && post_text) {
