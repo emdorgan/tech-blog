@@ -9,3 +9,20 @@ body{
 .hidden{
   display: none;
 }
+.custom-post{
+  border: 5px solid black;
+  border-radius: 10px;
+  width: fit-content;
+}
+main a {
+  text-decoration: none;
+  color: black
+}
+main a:hover{
+  background-color: bisque;
+  color: black
+}
+main {
+  padding: 10px;
+  margin: 10px;
+}

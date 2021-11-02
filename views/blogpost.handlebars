@@ -1,6 +1,6 @@
-{{!-- Set the blog post --}}
+{{!-- Sets the blog post --}}
 <div class ="row mb-4">
-        <div class = "col md-5">
+        <div class = "col md-5 custom-post">
             <h2>
                 {{blogPost.title}}
             </h2>
@@ -12,10 +12,10 @@
             </p>
         </div>
 </div>
-{{!-- iterate through each comment --}}
+{{!-- iterates through each comment --}}
 
 {{#each blogPost.comments as |comment|}}
-<div class ="row mb-4">
+<div class ="row mb-4 custom-post">
     <p>{{comment.comment_text}}</p>
     <p>{{comment.commenter}} on {{format_date comment.date_created}}</p>
 </div>

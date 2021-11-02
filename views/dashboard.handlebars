@@ -5,12 +5,13 @@
 </div>
 <div class="row my-posts" id="current-post">
 {{#each posts as |my_post|}}
-  <div class ="row mb-4">
-    <div class = "col md-5">
-        <h2>
-            {{!-- make into a link to the individual blogpost after testing --}}
-            {{my_post.title}}
-        </h2>
+  <div class ="row mb-4 custom-post">
+      <div class = "col md-5">
+        <a href="/post/{{my_post.id}}">
+          <h2>
+              {{my_post.title}}
+          </h2>
+        </a>
         <p id="post{{my_post.id}}">
             {{my_post.post_text}}
         </p>
@@ -20,14 +21,12 @@
           </div>
           <button type="submit" class="btn btn-warning" id="save-update" data-id="{{my_post.id}}">Save Update</button>
         </form>
-        <p>
+        <p class ="author">
             Written by me on {{format_date my_post.date_created}}
         </p>
         <button class="btn btn-sm btn-warning" data-id="{{my_post.id}}" id="update">UPDATE</button>
         <button class="btn btn-sm btn-danger" data-id="{{my_post.id}}" id="delete">DELETE</button>
-
-
-    </div>
+      </div>
   </div>
 {{/each}}
 </div>

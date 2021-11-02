@@ -1,17 +1,16 @@
 {{!-- landing page, shows all blogposts --}}
 
 {{#each posts as |blogpost|}}
-<div class ="row mb-4">
+<div class ="row mb-4 custom-post">
     <a href="/post/{{blogpost.id}}">
         <div class = "col md-5">
             <h2>
-                {{!-- make into a link to the individual blogpost after testing --}}
                 {{blogpost.title}}
             </h2>
             <p>
                 {{blogpost.post_text}}
             </p>
-            <p>
+            <p class ="author">
                 Written by {{blogpost.user.username}} on {{format_date blogpost.date_created}}
             </p>
         </div>

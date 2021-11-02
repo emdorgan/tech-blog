@@ -2,16 +2,17 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## To-do list
-
-* When a user clicks on one of THEIR posts, they have the option to update
-* When a user clicks on THEIR posts, they have the option to delete
-* Dashboard posts should be clickable too
-
+This is a full stack application with a fully functional MySQL database that allows the user to create an account, sign into an existing account, make blogposts, add comments to existing blogposts, update blogposts and even delete blogposts. The database has been seeded with some example data.
 
 ## Getting Started
 
+* Navigate to the login to make an account
+* Once you sign up, you'll be automatically logged in
+* Go to your dashboard to make a new post, or navigate to an existing post to add a comment
+
 ## Deployed Link
+
+[See Site Live!](https://pacific-beach-72333.herokuapp.com/)
 
 ## Database Model
 
@@ -83,13 +84,14 @@
 ## Screenshots
 
 
+
 ## Built With
 
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * [Node.js](https://nodejs.org/)
 * [MySQL2 package](https://www.npmjs.com/package/mysql2)
-* [Insomnia](https://insomnia.rest/)
 * [Sequelize](https://sequelize.org/)
+* [Handlebars](https://handlebarsjs.com/)
 
 
 ## Authors
