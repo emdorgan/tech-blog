@@ -25,7 +25,7 @@ router.get('/', async (req, res) =>{
 });
 
 // GET route for when a user clicks on a blogpost
-router.get('/blogpost/:id', async (req, res) => {
+router.get('/post/:id', async (req, res) => {
     try {
         const blogPostData = await Post.findByPk(req.params.id, {
             include: [
@@ -35,10 +35,7 @@ router.get('/blogpost/:id', async (req, res) => {
                 },
                 {
                     model: Comment,
-                    attributes: ['comment_text', 'date_created'],
-                    include: [{
-                        model: User
-                    }]
+                    attributes: ['comment_text', 'date_created', 'commenter'],
                 },
             ],
         });

@@ -17,6 +17,6 @@
 {{#each blogPost.comments as |comment|}}
 <div class ="row mb-4">
     <p>{{comment.comment_text}}</p>
-    <p>{{comment.user_id}} on {{format_date comment.date_created}}</p>
+    <p>{{comment.commenter}} on {{format_date comment.date_created}}</p>
 </div>
 {{/each}}

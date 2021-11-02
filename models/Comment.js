@@ -29,6 +29,9 @@ Comment.init(
                 key: 'id',
             },
         },
+        commenter: {
+            type: DataTypes.TEXT,
+        },
         post_id: {
             type: DataTypes.INTEGER,
             references: {
