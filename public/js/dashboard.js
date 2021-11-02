@@ -1,3 +1,5 @@
+// this complex button handler figures out if the button hit was delete, update or 'save update', and routes the user accordingly
+
 const multiBtnHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
         if(event.target.getAttribute('id') === 'delete'){
@@ -37,6 +39,6 @@ const multiBtnHandler = async (event) => {
     }   
 };
 
-
+// This event listener works with THREE seperate buttons, which are all dynamically generated
 
 document.querySelector('.my-posts').addEventListener('click', multiBtnHandler);

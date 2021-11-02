@@ -83,7 +83,9 @@ This is a full stack application with a fully functional MySQL database that all
 
 ## Screenshots
 
-
+![Screenshot of main](screenshots/homepage.png)
+![Screenshot of main](screenshots/single-post.png)
+![Screenshot of main](screenshots/update-post.png)
 
 ## Built With
 
@@ -92,7 +94,6 @@ This is a full stack application with a fully functional MySQL database that all
 * [MySQL2 package](https://www.npmjs.com/package/mysql2)
 * [Sequelize](https://sequelize.org/)
 * [Handlebars](https://handlebarsjs.com/)
-
 
 ## Authors
 

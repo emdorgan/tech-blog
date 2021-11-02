@@ -2,6 +2,8 @@ const router = require('express').Router();
 const withAuth = require('../utils/auth');
 const { User, Post, Comment } = require('../models');
 
+// GET rout for the homepage, displays all blogposts
+
 router.get('/', async (req, res) =>{
     try {
         const postData = await Post.findAll({
@@ -49,10 +51,6 @@ router.get('/post/:id', async (req, res) => {
         res.status(500).json(err);
     }
 })
-
-// POST route for new comment
-
-
 
 // GET route for the user's dashboard. Only happens with authorization, fetches the matching user's blogposts
 router.get('/dashboard', withAuth, async (req, res) => {
