@@ -11,9 +11,15 @@
             {{!-- make into a link to the individual blogpost after testing --}}
             {{my_post.title}}
         </h2>
-        <p>
+        <p id="post{{my_post.id}}">
             {{my_post.post_text}}
         </p>
+        <form class="update-form hidden" id="form{{my_post.id}}">
+          <div class="form-group">
+            <input type="text" class="form-control" id="new-comment-{{my_post.id}}" value="{{my_post.post_text}}">
+          </div>
+          <button type="submit" class="btn btn-warning" id="save-update" data-id="{{my_post.id}}">Save Update</button>
+        </form>
         <p>
             Written by me on {{format_date my_post.date_created}}
         </p>

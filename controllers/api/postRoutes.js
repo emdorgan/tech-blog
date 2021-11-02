@@ -26,13 +26,31 @@ router.delete('/:id', withAuth, async (req, res) => {
                 post_id: req.params.id
             }
         })
-        console.log(req.params.id, req.session.user_id);
         const postData = await Post.destroy({
             where:{
                 id: req.params.id,
                 user_id: req.session.user_id,
             },
         });
+        if (!postData) {
+            res.status(404).json({message: 'No post found with that id'})
+        }
+
+        res.status(200).json(postData);
+    } catch (err) {
+        res.status(400).json(err);
+    }
+})
+
+router.put('/:id', withAuth, async (req, res) => {
+    try {
+        console.log(req.body);
+        const postData = await Post.update({
+            post_text: req.body.post_text
+            },
+            {
+                where: {id: req.params.id}
+            })
         if (!postData) {
             res.status(404).json({message: 'No post found with that id'})
         }
